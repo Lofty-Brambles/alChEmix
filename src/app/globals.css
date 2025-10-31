@@ -26,6 +26,73 @@
 	}
 }
 
+[data-theme="light"] {
+	--background: #ffffff;
+	--background-secondary: #c8f0f5;
+	--background-tertiary: #c6f0f5;
+	--foreground: #06c1e6;
+	--foreground-secondary: #1fada3;
+	--foreground-tertiary: #2dd2c7;
+	--text-primary: #1f242e;
+	--text-secondary: #626b7a;
+
+	& .dark-glow-animation {
+		@apply animate-[darks_5s_750ms_linear_infinite]!;
+	}
+}
+
+[data-theme="dark"] {
+	--background: #15191f;
+	--background-secondary: #1a2b33;
+	--background-tertiary: #1f282d;
+	--foreground: #27d9f5;
+	--foreground-secondary: #33ccbb;
+	--foreground-tertiary: #47e6d4;
+	--text-primary: #e5ecee;
+	--text-secondary: #e5ecee;
+
+	& .dark-glow-animation {
+		@apply animate-[lights_5s_750ms_linear_infinite]!;
+	}
+
+	& .filter-invert {
+		filter: invert(100%);
+	}
+}
+
+@media (max-width: 550px) {
+	.flip-clock {
+		--fcc-digit-block-width: 25px; /* width of digit card */
+		--fcc-digit-block-height: 37.5px; /* height of digit card */
+		--fcc-digit-font-size: 20px; /* font size of digit */
+	}
+}
+
+.glass-shine-effect {
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	position: relative;
+	transition: transform 200ms ease;
+	overflow: hidden;
+}
+.glass-shine-effect:before {
+	content: "";
+	position: absolute;
+	height: 150%;
+	width: 50px;
+	transform: rotate(30deg);
+	background-color: rgba(255, 255, 255, 0.2);
+	left: -150px;
+}
+.glass-shine-effect:hover {
+	transform: scale(1.1);
+}
+.glass-shine-effect:hover:before {
+	transition: left 500ms ease;
+	left: 240px;
+}
+
 @theme inline {
 	--color-background: var(--background);
 	--color-background-secondary: var(--background-secondary);
@@ -86,6 +153,100 @@
 		}
 		to {
 			opacity: 1;
+		}
+	}
+
+	@keyframes lights {
+		0% {
+			color: hsl(230, 40%, 80%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 50%, 0.2),
+				0 0 0.125em hsla(320, 100%, 60%, 0.3),
+				-1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+				1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+		}
+
+		30% {
+			color: hsl(230, 80%, 90%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 50%, 0.5),
+				0 0 0.125em hsla(320, 100%, 60%, 0.5),
+				-0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+				0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+		}
+
+		40% {
+			color: hsl(230, 100%, 95%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 50%, 0.5),
+				0 0 0.125em hsla(320, 100%, 90%, 0.5),
+				-0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+				0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+		}
+
+		70% {
+			color: hsl(230, 80%, 90%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 50%, 0.5),
+				0 0 0.125em hsla(320, 100%, 60%, 0.5),
+				0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+				-0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+		}
+
+		100% {
+			color: hsl(230, 40%, 80%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 50%, 0.2),
+				0 0 0.125em hsla(320, 100%, 60%, 0.3),
+				1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+				-1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+		}
+	}
+
+	@keyframes darks {
+		0% {
+			color: hsl(230, 40%, 20%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 20%, 0.2),
+				0 0 0.125em hsla(320, 100%, 25%, 0.3),
+				-1em -0.125em 0.5em hsla(40, 100%, 20%, 0),
+				1em 0.125em 0.5em hsla(200, 100%, 20%, 0);
+		}
+
+		30% {
+			color: hsl(230, 40%, 25%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 30%, 0.4),
+				0 0 0.125em hsla(320, 100%, 30%, 0.4),
+				-0.5em -0.125em 0.25em hsla(40, 100%, 30%, 0.2),
+				0.5em 0.125em 0.25em hsla(200, 100%, 30%, 0.3);
+		}
+
+		40% {
+			color: hsl(230, 50%, 30%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 25%, 0.5),
+				0 0 0.125em hsla(320, 100%, 40%, 0.5),
+				-0.25em -0.125em 0.125em hsla(40, 100%, 35%, 0.2),
+				0.25em 0.125em 0.125em hsla(200, 100%, 35%, 0.4);
+		}
+
+		70% {
+			color: hsl(230, 45%, 28%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 25%, 0.4),
+				0 0 0.125em hsla(320, 100%, 30%, 0.4),
+				0.5em -0.125em 0.25em hsla(40, 100%, 30%, 0.2),
+				-0.5em 0.125em 0.25em hsla(200, 100%, 30%, 0.3);
+		}
+
+		100% {
+			color: hsl(230, 40%, 20%);
+			text-shadow:
+				0 0 1em hsla(320, 100%, 20%, 0.2),
+				0 0 0.125em hsla(320, 100%, 25%, 0.3),
+				1em -0.125em 0.5em hsla(40, 100%, 25%, 0),
+				-1em 0.125em 0.5em hsla(200, 100%, 25%, 0);
 		}
 	}
 }

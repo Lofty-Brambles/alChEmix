@@ -6,13 +6,15 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+import { ThemeSwitcher } from "$/components/ThemeSwitcher";
+
 export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const links = [
-		["Timeline", "/#timeline"],
-		["Sponsors", "/#sponsors"],
-		["Prizes", "/#prizes"],
+		["Home", "/"],
+		["Events", "/events"],
+		["FAQ", "/faq"],
 	];
 
 	return (
@@ -27,6 +29,9 @@ export function Navbar() {
 				{/* @edit */}
 
 				<ul className="hidden md:flex text-lg min-h-10 items-center gap-4 font-medium">
+					<li>
+						<ThemeSwitcher />
+					</li>
 					{links.map((linkset) => (
 						<li
 							key={linkset[0]}
@@ -37,14 +42,17 @@ export function Navbar() {
 					))}
 				</ul>
 
-				{/* Hamburger icon */}
-				<button
-					className="md:hidden p-2 hover:text-foreground-tertiary transition-colors border border-background-tertiary rounded"
-					onClick={() => setIsOpen(true)}
-					aria-label="Open menu"
-				>
-					<Menu size={28} />
-				</button>
+				<div className="md:hidden flex gap-4">
+					<ThemeSwitcher />
+					{/* Hamburger icon */}
+					<button
+						className="p-2 hover:text-foreground-tertiary transition-colors border border-background-tertiary rounded"
+						onClick={() => setIsOpen(true)}
+						aria-label="Open menu"
+					>
+						<Menu size={28} />
+					</button>
+				</div>
 			</div>
 
 			{/* Mobile overlay */}
@@ -59,10 +67,10 @@ export function Navbar() {
 							duration: 0.6,
 							ease: [0.22, 1, 0.36, 1],
 						}}
-						className="fixed inset-0 z-50 bg-[#0d0f12]/95 backdrop-blur-md flex flex-col items-center justify-center h-full"
+						className="fixed inset-0 z-50 bg-background-secondary/95 backdrop-blur-md flex flex-col items-center justify-center h-full"
 					>
 						<button
-							className="absolute top-8 right-8 sm:top-12 sm:right-12 text-white hover:text-foreground-tertiary transition-colors"
+							className="absolute top-8 right-8 sm:top-12 sm:right-12 hover:text-foreground-tertiary transition-colors"
 							onClick={() => setIsOpen(false)}
 							aria-label="Close menu"
 						>

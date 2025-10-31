@@ -19,12 +19,12 @@ export function HeroSection() {
 				<div
 					id="barLeft"
 					ref={barLeft}
-					className="absolute top-1/2 left-[-46%] h-[120px] w-[33%] -translate-y-1/2 skew-x-[-18deg] opacity-95 dark:mix-blend-screen bg-linear-to-r from-emerald-400/95 to-emerald-400/40"
+					className="absolute top-1/2 left-[-46%] h-[120px] w-[33%] max-w-[333px] -translate-y-1/2 skew-x-[-18deg] opacity-95 bg-linear-to-r from-emerald-400/95 to-emerald-400/40"
 				/>
 				<div
 					id="barRight"
 					ref={barRight}
-					className="absolute top-1/2 right-[-46%] h-[120px] w-[33%] -translate-y-1/2 skew-x-[-18deg] opacity-95 dark:mix-blend-screen bg-linear-to-r from-emerald-400/95 to-emerald-400/40"
+					className="absolute top-1/2 right-[-46%] h-[120px] w-[33%] max-w-[333px] -translate-y-1/2 skew-x-[-18deg] opacity-95 bg-linear-to-r from-emerald-400/95 to-emerald-400/40"
 				/>
 			</div>
 

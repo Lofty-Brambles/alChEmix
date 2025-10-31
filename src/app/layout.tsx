@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Inter, DM_Sans } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 import { Navbar } from "$/components/Navbar";
+import { Footer } from "$/components/Footer";
 
 import "./globals.css";
 
@@ -53,12 +55,16 @@ type ChildrenOnlyProps = Readonly<{
 
 export default function RootLayout({ children }: ChildrenOnlyProps) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
+			<head></head>
 			<body
-				className={`${poppins.variable} ${inter.variable} ${dmSans.variable} grid grid-cols-[1fr_min(42rem,100%)_1fr] *:col-2 font-inter`}
+				className={`${poppins.variable} ${inter.variable} ${dmSans.variable} grid grid-cols-[1fr_min(45rem,100%)_1fr] *:col-2 font-inter`}
 			>
-				<Navbar />
-				{children}
+				<ThemeProvider>
+					<Navbar />
+					{children}
+					<Footer />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
