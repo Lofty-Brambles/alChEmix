@@ -28,7 +28,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		".next/dev/types/**/*.ts",
-		"**/*.mts"
-, "src/app/checker"	],
+		"**/*.mts",
+		"src/app/checker"
+	],
 	"exclude": ["node_modules"]
 }
