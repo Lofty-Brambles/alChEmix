@@ -1,7 +1,18 @@
+import { HeroSection } from "$/components/root/HeroSection";
+import { Description } from "$/components/root/Description";
+
 export default function Home() {
 	return (
-		<div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-			hello world
-		</div>
+		<>
+			<HeroSection />
+			<Description />
+			{/* - Item described cards
+					- Timeline
+			    - Gallery
+					- Sponsors
+					- Footer (https://hokfokk.vercel.app/)
+					- /events
+					- /faq */}
+		</>
 	);
 }
