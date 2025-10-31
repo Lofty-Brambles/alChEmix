@@ -16,7 +16,9 @@ export function DescribedCard({ number, description, color }: DescribedCardProps
 				<span>{number}</span>
 				<span className="ml-1 text-2xl">+</span>
 			</div>
-			<p className="mt-2 text-sm md:text-base text-text-secondary text-center italic">{description}</p>
+			<p className="mt-2 text-sm md:text-base text-text-secondary text-center italic">
+				{description}
+			</p>
 		</li>
 	);
 }
