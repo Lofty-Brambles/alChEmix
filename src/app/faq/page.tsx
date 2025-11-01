@@ -34,7 +34,7 @@ export default function FAQPage() {
 	}, []);
 
 	return (
-		<section className="relative grid mt-20 h-fit w-full pt-10 place-items-center">
+		<section className="relative grid mt-20 h-fit w-full pt-30 pb-20 place-items-center">
 			<div className="absolute inset-0 pointer-events-none">
 				<div
 					id="barLeft"
