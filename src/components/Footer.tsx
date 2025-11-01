@@ -7,7 +7,7 @@ export function Footer() {
 	const { theme } = useTheme();
 
 	return (
-		<footer className="w-full grid-bleed bg-background text-text-primary pt-16 pb-6 border-t border-background-tertiary">
+		<footer className="w-full grid-bleed bg-background text-text-primary pt-16 pb-6 border-t border-background-tertiary animate-[fade-in_0.5s_ease-in_0.4s_forwards] opacity-0">
 			<div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-evenly items-center px-6 md:px-12 gap-10 md:gap-0">
 				{/* Left: Logo */}
 				<div className="flex items-center gap-2">

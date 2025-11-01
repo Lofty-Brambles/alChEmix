@@ -40,7 +40,7 @@ export function HeroSection() {
 					al<span className="text-foreground-tertiary">ChE</span>mix
 				</h1>
 				<p className="mt-3 text-lg font-semibold opacity-0 animate-sub-in translate-y-1.5">
-					Lorem. Ipsum. Dolor. {/* @edit */}
+					Chaos meeting Creativity {/* @edit */}
 				</p>
 				<div className="mt-4 h-[3px] origin-left rounded bg-linear-to-r from-emerald-400 to-sky-400  animate-underline-grow" />
 			</div>

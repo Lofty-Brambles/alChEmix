@@ -24,7 +24,7 @@ export function Description() {
 				</h3>
 				<FlipClockCountdown
 					className="mb-8 mx-auto w-fit flip-clock"
-					to={new Date("2025-11-14T09:00:00")}
+					to={new Date("2025-11-14T10:00:00")}
 				/>
 				<p className="text-pretty pb-8 sm:pb-4 px-6">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius enim nec nibh
