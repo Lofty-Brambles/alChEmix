@@ -34,7 +34,14 @@ export function HeroSection() {
 			<div className="relative z-10 flex flex-col items-center text-center">
 				<div className="flex items-center justify-center mb-6">
 					<div className="flex h-40 w-40 items-center justify-center rounded-2xl bg-foreground-secondary shadow-[0_0_25px_rgba(51,204,187,0.4)] animate-logo-in opacity-0 scale-[0.92] translate-y-2.5">
-						<span className="text-5xl font-bold text-background-tertiary"><Image src="/img/alchemix-square.png" alt="A square logo of the alchemix event" width={160} height={160} /></span>
+						<span className="text-5xl font-bold text-background-tertiary">
+							<Image
+								src="/img/alchemix-square.png"
+								alt="A square logo of the alchemix event"
+								width={160}
+								height={160}
+							/>
+						</span>
 						{/* @edit */}
 					</div>
 				</div>
