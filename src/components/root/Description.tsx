@@ -20,16 +20,17 @@ export function Description() {
 					</div>
 				</div>
 				<h3 className="mt-6 mb-4 text-3xl text-text-primary text-bold font-poppins animate-[darks_5s_750ms_linear_infinite] dark:animate-[lights_5s_750ms_linear_infinite] dark-glow-animation">
-					#weBLASTin
+					#Turning Reactions Into Reality
 				</h3>
 				<FlipClockCountdown
 					className="mb-8 mx-auto w-fit flip-clock"
 					to={new Date("2025-11-14T10:00:00")}
 				/>
-				<p className="text-pretty pb-8 sm:pb-4 px-6">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius enim nec nibh
-					volutpat, ac placerat arcu rutrum. Phasellus ultricies feugiat consectetur. Nam dolor
-					justo, maximus vel commodo sit amet, pretium eu nisi.
+				<p className="text-pretty pb-8 px-6">
+					Alchemix 2025, the flagship event of Asia’s oldest Chemical Engineering Department at
+					Jadavpur University, returns with renewed zeal—uniting students, researchers, and industry
+					leaders through contests, workshops, and cultural programs that celebrate innovation,
+					creativity, and collaboration between academia and industry.
 				</p>
 				<div className="flex flex-col xs:flex-row items-center justify-center gap-4 font-dm-sans pb-4">
 					<a

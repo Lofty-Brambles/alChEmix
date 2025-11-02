@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { Logo } from "../Logo";
 
 export function HeroSection() {
 	const barLeft = useRef<HTMLDivElement>(null);
@@ -32,16 +34,18 @@ export function HeroSection() {
 			<div className="relative z-10 flex flex-col items-center text-center">
 				<div className="flex items-center justify-center mb-6">
 					<div className="flex h-40 w-40 items-center justify-center rounded-2xl bg-foreground-secondary shadow-[0_0_25px_rgba(51,204,187,0.4)] animate-logo-in opacity-0 scale-[0.92] translate-y-2.5">
-						<span className="text-5xl font-bold text-background-tertiary">/A\</span>
+						<span className="text-5xl font-bold text-background-tertiary"><Image src="/img/alchemix-square.png" alt="A square logo of the alchemix event" width={160} height={160} /></span>
 						{/* @edit */}
 					</div>
 				</div>
-				<h1 className="text-5xl md:text-6xl font-extrabold opacity-0 animate-headline-in translate-y-2 scale-[0.98]">
-					al<span className="text-foreground-tertiary">ChE</span>mix
+				<h1 className="text-5xl md:text-6xl font-extrabold opacity-0 animate-headline-in translate-y-2">
+					<Logo className="w-120 h-full" />
 				</h1>
-				<p className="mt-3 text-lg font-semibold opacity-0 animate-sub-in translate-y-1.5">
-					Chaos meeting Creativity {/* @edit */}
-				</p>
+				<div className="opacity-0 animate-sub-in">
+					<p className="mt-1 text-lg font-semibold translate-y-1.5 animate-[darks_5s_750ms_linear_infinite] dark:animate-[lights_5s_750ms_linear_infinite] dark-glow-animation">
+						where chaos meets creativity
+					</p>
+				</div>
 				<div className="mt-4 h-[3px] origin-left rounded bg-linear-to-r from-emerald-400 to-sky-400  animate-underline-grow" />
 			</div>
 		</section>

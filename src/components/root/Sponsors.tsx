@@ -1,9 +1,10 @@
 const sponsors = [
-	{ name: "Devfolio", img: "/img/devfolio.webp", link: "https://devfolio.co" },
-	{ name: "Polygon", img: "/img/polygon-logo.png", link: "https://polygon.technology" },
-	{ name: "ETHIndia", img: "/img/ethindia-logo.png", link: "https://ethindia.co" },
-	{ name: "Aptos", img: "/img/aptos-logo.png", link: "https://aptoslabs.com" },
-	{ name: "Lôft", img: "/img/loft-logo.png", link: "https://loft.sh" },
+	{ name: "Canon", img: "bg-[url('/img/canon-logo.png')]", link: "https://in.canon/en/consumer" },
+	{
+		name: "Edugraph",
+		img: "bg-[url('/img/edugraph-logo.svg')] bg-contain!",
+		link: "https://www.telegraphindia.com/edugraph",
+	},
 ];
 
 export function Sponsors() {
@@ -34,13 +35,9 @@ export function Sponsors() {
 						</div>
 
 						{/* Card Inner */}
-						<div className="flex items-center justify-center rounded-xl bg-background-tertiary p-8 transition-transform duration-500 group-hover:scale-[1.03]">
-							<img
-								src={sponsor.img}
-								alt={`${sponsor.name} logo`}
-								className="max-h-12 w-auto select-none"
-							/>
-						</div>
+						<div
+							className={`h-28 w-48 rounded-xl bg-background-tertiary transition-transform duration-500 group-hover:scale-[1.03] ${sponsor.img} bg-cover bg-center bg-no-repeat`}
+						></div>
 					</a>
 				))}
 			</div>

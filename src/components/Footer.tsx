@@ -1,11 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import { useTheme } from "next-themes";
 
 export function Footer() {
-	const { theme } = useTheme();
-
 	return (
 		<footer className="w-full grid-bleed bg-background text-text-primary pt-16 pb-6 border-t border-background-tertiary animate-[fade-in_0.5s_ease-in_0.4s_forwards] opacity-0">
 			<div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-evenly items-center px-6 md:px-12 gap-10 md:gap-0">
@@ -25,7 +20,13 @@ export function Footer() {
 						Stay Connected
 					</h3>
 					<div className="flex gap-4">
-						{[{ icon: "/img/instagram.svg", href: "#" }].map(({ icon, href }, i) => (
+						{[
+							{ icon: "/img/instagram.svg", href: "https://www.instagram.com/iiche_ju/" },
+							{
+								icon: "/img/linked-in.svg",
+								href: "https://www.linkedin.com/company/jadavpur-university-department-of-chemical-engineering/",
+							},
+						].map(({ icon, href }, i) => (
 							<a
 								key={i}
 								href={href}
@@ -38,7 +39,7 @@ export function Footer() {
 									alt={icon.split("/").pop()?.split(".")[0] + " icon"}
 									width={20}
 									height={20}
-									className="filter-invert"
+									className={`filter-invert ${i === 1 ? "scale-200" : ""}`}
 								/>
 							</a>
 						))}

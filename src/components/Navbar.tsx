@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 import { ThemeSwitcher } from "$/components/ThemeSwitcher";
+import { Logo } from "./Logo";
 
 export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ export function Navbar() {
 					href="/"
 					className="text-2xl font-poppins font-semibold tracking-tight hover:text-foreground-tertiary transition-colors"
 				>
-					alChEmix<span className="text-foreground-tertiary">(🧪)</span>
+					<Logo className="w-60 h-full" />
 				</Link>
 				{/* @edit */}
 

@@ -20,14 +20,14 @@ export default function Home() {
 						color="bg-cyan-800/30 text-cyan-300"
 					/>
 					<DescribedCard
-						number={15}
-						description="Incredible speakers"
-						color="bg-rose-800/30 text-rose-300"
+						number={48}
+						description="Hours of fun activities"
+						color="bg-lime-800/30 text-lime-300"
 					/>
 					<DescribedCard
-						number={48}
-						description="Hours of content"
-						color="bg-lime-800/30 text-lime-300"
+						number={10}
+						description="Grand Prizes to be won"
+						color="bg-rose-800/30 text-rose-300"
 					/>
 				</div>
 				<div className="mt-8 h-[3px] origin-left rounded bg-linear-to-r from-emerald-400 to-sky-400 animate-underline-grow" />
@@ -39,9 +39,6 @@ export default function Home() {
 				<div className="mt-8 h-[3px] origin-left rounded bg-linear-to-r from-emerald-400 to-sky-400  animate-underline-grow" />
 				<Sponsors />
 			</div>
-			{/* - Footer (https://hokfokk.vercel.app/)
-					- /events
-					- /faq */}
 		</>
 	);
 }
