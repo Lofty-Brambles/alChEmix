@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-	--background: #ffffff;
-	--background-secondary: #c8f0f5;
-	--background-tertiary: #c6f0f5;
-	--foreground: #06c1e6;
-	--foreground-secondary: #1fada3;
-	--foreground-tertiary: #2dd2c7;
+	--background: #c9f0f5;
+	--background-secondary: #c3eaf1;
+	--background-tertiary: #a1e1ea;
+	--foreground: #075852;
+	--foreground-secondary: #1faca3;
+	--foreground-tertiary: #05c1e6;
 	--text-primary: #1f242e;
 	--text-secondary: #626b7a;
 
@@ -22,17 +22,17 @@
 		--foreground-secondary: #33ccbb;
 		--foreground-tertiary: #47e6d4;
 		--text-primary: #e5ecee;
-		--text-secondary: #e5ecee;
+		--text-secondary: #929b9a;
 	}
 }
 
 [data-theme="light"] {
-	--background: #ffffff;
-	--background-secondary: #c8f0f5;
-	--background-tertiary: #c6f0f5;
-	--foreground: #06c1e6;
-	--foreground-secondary: #1fada3;
-	--foreground-tertiary: #2dd2c7;
+	--background: #c9f0f5;
+	--background-secondary: #c3eaf1;
+	--background-tertiary: #a1e1ea;
+	--foreground: #075852;
+	--foreground-secondary: #1faca3;
+	--foreground-tertiary: #05c1e6;
 	--text-primary: #1f242e;
 	--text-secondary: #626b7a;
 
@@ -49,7 +49,7 @@
 	--foreground-secondary: #33ccbb;
 	--foreground-tertiary: #47e6d4;
 	--text-primary: #e5ecee;
-	--text-secondary: #e5ecee;
+	--text-secondary: #929b9a;
 
 	& .dark-glow-animation {
 		@apply animate-[lights_5s_750ms_linear_infinite]!;
@@ -69,7 +69,6 @@
 }
 
 .glass-shine-effect {
-	background-color: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	position: relative;

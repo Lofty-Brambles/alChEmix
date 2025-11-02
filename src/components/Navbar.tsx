@@ -35,7 +35,7 @@ export function Navbar() {
 					{links.map((linkset) => (
 						<li
 							key={linkset[0]}
-							className="min-h-7 px-2 hover:border-foreground-tertiary hover:text-foreground-tertiary hover:scale-110 duration-300 transition-transform glowing-ball relative"
+							className="min-h-7 px-2 hover:border-foreground-tertiary hover:text-foreground-secondary hover:scale-110 duration-300 transition-transform glowing-ball relative"
 						>
 							<Link href={linkset[1]}>{linkset[0]}</Link>
 						</li>
@@ -46,7 +46,7 @@ export function Navbar() {
 					<ThemeSwitcher />
 					{/* Hamburger icon */}
 					<button
-						className="p-2 hover:text-foreground-tertiary transition-colors border border-background-tertiary rounded"
+						className="p-2 hover:text-foreground-secondary transition-colors border border-background-tertiary rounded"
 						onClick={() => setIsOpen(true)}
 						aria-label="Open menu"
 					>

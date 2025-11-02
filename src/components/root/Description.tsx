@@ -12,11 +12,11 @@ export function Description() {
 				<div className="flex flex-col xs:flex-row items-center justify-center gap-4 text-text-secondary pb-8 sm:pb-4">
 					<div className="flex items-center gap-1">
 						<Calendar className="w-4 h-4 text-foreground" />
-						<span className="px-1">November 14–15, 2025</span>
+						<span className="text-text-secondary px-1">November 14–15, 2025</span>
 					</div>
 					<div className="flex items-center gap-1">
 						<MapPin className="w-4 h-4 text-foreground" />
-						<span className="px-1">HL Roy Auditorium</span>
+						<span className="text-text-secondary px-1">HL Roy Auditorium</span>
 					</div>
 				</div>
 				<h3 className="mt-6 mb-4 text-3xl text-text-primary text-bold font-poppins animate-[darks_5s_750ms_linear_infinite] dark:animate-[lights_5s_750ms_linear_infinite] dark-glow-animation">

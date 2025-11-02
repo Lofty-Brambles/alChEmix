@@ -22,7 +22,7 @@ export function ThemeSwitcher({ className }: { className?: string }) {
 			<Sun
 				size={20}
 				className={`absolute transition-all duration-500 ${
-					theme === "light"
+					theme !== "dark"
 						? "opacity-100 rotate-0 text-foreground"
 						: "opacity-0 -rotate-90 text-text-secondary"
 				}`}
