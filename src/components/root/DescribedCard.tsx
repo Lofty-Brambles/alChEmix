@@ -6,7 +6,7 @@ type DescribedCardProps = {
 
 export function DescribedCard({ number, description, color }: DescribedCardProps) {
 	return (
-		<li className="grid place-items-center w-40 px-8 py-6 bg-background-tertiary rounded-xl shadow-[0_4px_20px_rgba(56,189,248,0.15)] hover:shadow-[0_6px_24px_rgba(56,189,248,0.25)] transition glass-shine-effect">
+		<li className="grid place-items-center glass-shine-effect w-40 px-8 py-6 bg-background-tertiary rounded-xl shadow-[0_4px_20px_rgba(56,189,248,0.15)] hover:shadow-[0_6px_24px_rgba(56,189,248,0.25)] transition">
 			<div
 				className={`mb-4 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold ${color}`}
 			>
